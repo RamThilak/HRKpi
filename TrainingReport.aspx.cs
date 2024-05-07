@@ -76,7 +76,7 @@ namespace HRKpi
             {
                 using (SqlConnection con = new SqlConnection(constr))
                 {
-                    using (SqlCommand cmd = new SqlCommand("RptProcTrainingReport"))
+                    using (SqlCommand cmd = new SqlCommand("RptProcTrainingReport_test"))
                     {
                         using (SqlDataAdapter sda = new SqlDataAdapter())
                         {
