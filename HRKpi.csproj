@@ -1,0 +1,503 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D56E1D9E-EF00-436D-807D-DBB4C1EF8560}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HRKpi</RootNamespace>
+    <AssemblyName>HRKpi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44384</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ChangeKPIApprover.aspx" />
+    <Content Include="ChangePEPApprover.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\BootstrapStyleSheet.css" />
+    <Content Include="CreateLogin.aspx" />
+    <Content Include="Custom_Style\adminlte.css" />
+    <Content Include="Custom_Style\dist\css\adminlte.css" />
+    <Content Include="Custom_Style\dist\css\adminlte.min.css" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.components.css" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.components.min.css" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.core.css" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.core.min.css" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.extra-components.css" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.extra-components.min.css" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.pages.css" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.pages.min.css" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.plugins.css" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.plugins.min.css" />
+    <Content Include="Custom_Style\dist\img\avatar.png" />
+    <Content Include="Custom_Style\dist\img\avatar2.png" />
+    <Content Include="Custom_Style\dist\img\avatar3.png" />
+    <Content Include="Custom_Style\dist\img\avatar4.png" />
+    <Content Include="Custom_Style\dist\img\avatar5.png" />
+    <Content Include="Custom_Style\dist\img\boxed-bg.jpg" />
+    <Content Include="Custom_Style\dist\img\boxed-bg.png" />
+    <Content Include="Custom_Style\dist\img\icons.png" />
+    <Content Include="Custom_Style\dist\img\photo1.png" />
+    <Content Include="Custom_Style\dist\img\photo2.png" />
+    <Content Include="Custom_Style\dist\img\photo3.jpg" />
+    <Content Include="Custom_Style\dist\img\photo4.jpg" />
+    <Content Include="Custom_Style\dist\js\adminlte.js" />
+    <Content Include="Custom_Style\dist\js\adminlte.min.js" />
+    <Content Include="Custom_Style\dist\js\demo.js" />
+    <Content Include="Custom_Style\dist\js\pages\dashboard.js" />
+    <Content Include="Custom_Style\dist\js\pages\dashboard2.js" />
+    <Content Include="Custom_Style\dist\js\pages\dashboard3.js" />
+    <Content Include="Custom_Style\fontawesome-free\css\all.css" />
+    <Content Include="Custom_Style\fontawesome-free\css\all.min.css" />
+    <Content Include="Custom_Style\fontawesome-free\css\brands.css" />
+    <Content Include="Custom_Style\fontawesome-free\css\brands.min.css" />
+    <Content Include="Custom_Style\fontawesome-free\css\fontawesome.css" />
+    <Content Include="Custom_Style\fontawesome-free\css\fontawesome.min.css" />
+    <Content Include="Custom_Style\fontawesome-free\css\regular.css" />
+    <Content Include="Custom_Style\fontawesome-free\css\regular.min.css" />
+    <Content Include="Custom_Style\fontawesome-free\css\solid.css" />
+    <Content Include="Custom_Style\fontawesome-free\css\solid.min.css" />
+    <Content Include="Custom_Style\fontawesome-free\css\svg-with-js.css" />
+    <Content Include="Custom_Style\fontawesome-free\css\svg-with-js.min.css" />
+    <Content Include="Custom_Style\fontawesome-free\css\v4-shims.css" />
+    <Content Include="Custom_Style\fontawesome-free\css\v4-shims.min.css" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-brands-400.svg" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-regular-400.svg" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-solid-900.svg" />
+    <Content Include="Custom_Style\Font_Offline.css" />
+    <Content Include="Custom_Style\icheck-bootstrap\icheck-bootstrap.css" />
+    <Content Include="Custom_Style\icheck-bootstrap\icheck-bootstrap.min.css" />
+    <Content Include="Custom_Style\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="Custom_Style\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="Custom_Style\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="Custom_Style\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="Custom_Style\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Custom_Style\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Custom_Style\jquery-ui\jquery-ui.css" />
+    <Content Include="Custom_Style\jquery-ui\jquery-ui.js" />
+    <Content Include="Custom_Style\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Custom_Style\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Custom_Style\jquery-ui\jquery-ui.structure.css" />
+    <Content Include="Custom_Style\jquery-ui\jquery-ui.structure.min.css" />
+    <Content Include="Custom_Style\jquery-ui\jquery-ui.theme.css" />
+    <Content Include="Custom_Style\jquery-ui\jquery-ui.theme.min.css" />
+    <Content Include="Custom_Style\jquery-ui\LICENSE.txt" />
+    <Content Include="Custom_Style\jquery\jquery.js" />
+    <Content Include="Custom_Style\jquery\jquery.min.js" />
+    <Content Include="Custom_Style\jquery\jquery.slim.js" />
+    <Content Include="Custom_Style\jquery\jquery.slim.min.js" />
+    <Content Include="Custom_Style\js\bootstrap.bundle.js" />
+    <Content Include="Custom_Style\js\bootstrap.bundle.min.js" />
+    <Content Include="Custom_Style\js\bootstrap.js" />
+    <Content Include="Custom_Style\js\bootstrap.min.js" />
+    <Content Include="Custom_Style\Login Css\login_noodle_base.css" />
+    <Content Include="Custom_Style\Login Css\login_noodle_base2.css" />
+    <Content Include="Custom_Style\Login Css\login_noodle_footer.css" />
+    <Content Include="Custom_Style\overlayScrollbars\css\OverlayScrollbars.css" />
+    <Content Include="Custom_Style\overlayScrollbars\css\OverlayScrollbars.min.css" />
+    <Content Include="Custom_Style\overlayScrollbars\js\jquery.overlayScrollbars.js" />
+    <Content Include="Custom_Style\overlayScrollbars\js\jquery.overlayScrollbars.min.js" />
+    <Content Include="Custom_Style\overlayScrollbars\js\OverlayScrollbars.js" />
+    <Content Include="Custom_Style\overlayScrollbars\js\OverlayScrollbars.min.js" />
+    <Content Include="Custom_Style\sparklines\sparkline.js" />
+    <Content Include="Custom_Style\tempusdominus-bootstrap-4.css" />
+    <Content Include="Custom_Style\tempusdominus-bootstrap-4\css\tempusdominus-bootstrap-4.css" />
+    <Content Include="Custom_Style\tempusdominus-bootstrap-4\css\tempusdominus-bootstrap-4.min.css" />
+    <Content Include="Custom_Style\tempusdominus-bootstrap-4\js\tempusdominus-bootstrap-4.js" />
+    <Content Include="Custom_Style\tempusdominus-bootstrap-4\js\tempusdominus-bootstrap-4.min.js" />
+    <Content Include="EmpAdd.aspx" />
+    <Content Include="GridStyle\GridStyle.css" />
+    <Content Include="GroupEmpExpReport.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\Assembly.jpg" />
+    <Content Include="images\blank_photo.jpg" />
+    <Content Include="images\libra.jpg" />
+    <Content Include="images\Libra_logo.jpg" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\payroll.jpg" />
+    <Content Include="images\perf-management.jpg" />
+    <Content Include="images\perf1.jpg" />
+    <Content Include="KPIReport.aspx" />
+    <Content Include="KPIStatusReport.aspx" />
+    <Content Include="Objective_final_view.aspx" />
+    <Content Include="Objective_view_main.aspx" />
+    <Content Include="PMS_approve.aspx" />
+    <Content Include="ResetUserPassword.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="MainMenu.Master" />
+    <Content Include="PMS_Approve_Mst.Master" />
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
+    <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="TrainingDetailsEntry.aspx" />
+    <Content Include="TrainingReport.aspx" />
+    <Content Include="UploadImage.aspx" />
+    <Content Include="UserDeactivation.aspx" />
+    <Content Include="UserLogin.aspx" />
+    <Content Include="View_Objectives.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="temp\bill_upload.xlsx" />
+    <Content Include="temp\empmasterupload.xlsx" />
+    <Content Include="temp\input.xlsx" />
+    <Content Include="temp\input_Jan2021.xlsx" />
+    <Content Include="temp\Libra_Oct21.xlsx" />
+    <Content Include="temp\pricolded.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChangeKPIApprover.aspx.cs">
+      <DependentUpon>ChangeKPIApprover.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeKPIApprover.aspx.designer.cs">
+      <DependentUpon>ChangeKPIApprover.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePEPApprover.aspx.cs">
+      <DependentUpon>ChangePEPApprover.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePEPApprover.aspx.designer.cs">
+      <DependentUpon>ChangePEPApprover.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateLogin.aspx.cs">
+      <DependentUpon>CreateLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateLogin.aspx.designer.cs">
+      <DependentUpon>CreateLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpAdd.aspx.cs">
+      <DependentUpon>EmpAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpAdd.aspx.designer.cs">
+      <DependentUpon>EmpAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GroupEmpExpReport.aspx.cs">
+      <DependentUpon>GroupEmpExpReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GroupEmpExpReport.aspx.designer.cs">
+      <DependentUpon>GroupEmpExpReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KPIReport.aspx.cs">
+      <DependentUpon>KPIReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPIReport.aspx.designer.cs">
+      <DependentUpon>KPIReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KPIStatusReport.aspx.cs">
+      <DependentUpon>KPIStatusReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPIStatusReport.aspx.designer.cs">
+      <DependentUpon>KPIStatusReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.Master.cs">
+      <DependentUpon>MainMenu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Master.designer.cs">
+      <DependentUpon>MainMenu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Objective_final_view.aspx.cs">
+      <DependentUpon>Objective_final_view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Objective_final_view.aspx.designer.cs">
+      <DependentUpon>Objective_final_view.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Objective_view_main.aspx.cs">
+      <DependentUpon>Objective_view_main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Objective_view_main.aspx.designer.cs">
+      <DependentUpon>Objective_view_main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PMS_approve.aspx.cs">
+      <DependentUpon>PMS_approve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PMS_approve.aspx.designer.cs">
+      <DependentUpon>PMS_approve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PMS_Approve_Mst.Master.cs">
+      <DependentUpon>PMS_Approve_Mst.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PMS_Approve_Mst.Master.designer.cs">
+      <DependentUpon>PMS_Approve_Mst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResetUserPassword.aspx.cs">
+      <DependentUpon>ResetUserPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetUserPassword.aspx.designer.cs">
+      <DependentUpon>ResetUserPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingDetailsEntry.aspx.cs">
+      <DependentUpon>TrainingDetailsEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainingDetailsEntry.aspx.designer.cs">
+      <DependentUpon>TrainingDetailsEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingReport.aspx.cs">
+      <DependentUpon>TrainingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainingReport.aspx.designer.cs">
+      <DependentUpon>TrainingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadImage.aspx.cs">
+      <DependentUpon>UploadImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadImage.aspx.designer.cs">
+      <DependentUpon>UploadImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserDeactivation.aspx.cs">
+      <DependentUpon>UserDeactivation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserDeactivation.aspx.designer.cs">
+      <DependentUpon>UserDeactivation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View_Objectives.aspx.cs">
+      <DependentUpon>View_Objectives.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_Objectives.aspx.designer.cs">
+      <DependentUpon>View_Objectives.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Custom_Style\dist\css\adminlte.css.map" />
+    <Content Include="Custom_Style\dist\css\adminlte.min.css.map" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.components.css.map" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.components.min.css.map" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.core.css.map" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.core.min.css.map" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.extra-components.css.map" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.extra-components.min.css.map" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.pages.css.map" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.pages.min.css.map" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.plugins.css.map" />
+    <Content Include="Custom_Style\dist\css\alt\adminlte.plugins.min.css.map" />
+    <Content Include="Custom_Style\dist\js\.eslintrc.json" />
+    <Content Include="Custom_Style\dist\js\adminlte.js.map" />
+    <Content Include="Custom_Style\dist\js\adminlte.min.js.map" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-brands-400.eot" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-brands-400.ttf" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-brands-400.woff" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-brands-400.woff2" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-regular-400.eot" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-regular-400.ttf" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-regular-400.woff" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-regular-400.woff2" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-solid-900.eot" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-solid-900.ttf" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-solid-900.woff" />
+    <Content Include="Custom_Style\fontawesome-free\webfonts\fa-solid-900.woff2" />
+    <Content Include="Custom_Style\icheck-bootstrap\LICENSE" />
+    <Content Include="Custom_Style\jquery\jquery.min.map" />
+    <Content Include="Custom_Style\jquery\jquery.slim.min.map" />
+    <Content Include="Custom_Style\js\bootstrap.bundle.js.map" />
+    <Content Include="Custom_Style\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Custom_Style\js\bootstrap.js.map" />
+    <Content Include="Custom_Style\js\bootstrap.min.js.map" />
+    <Content Include="Custom_Style\sparklines\sparkline.mjs" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
+    <Content Include="Templates\activatedeactivate.xlsx" />
+    <Content Include="Templates\ESDEmpMaster.xlsx" />
+    <Content Include="Templates\ReleaseObjective.xlsx" />
+    <Content Include="Templates\ResignData.xlsx" />
+    <Content Include="Templates\StatusReport.xlsx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55152</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44384/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,26 @@
+﻿/* styles for footer */
+.footer {
+    clear: both;
+    color: #726c72;
+    font: robot,regular, 12px;
+    line-height: 18px;
+    /*margin: 18px auto;*/
+    padding-top: 11px;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    /*width: 780px;*/
+    border: 0px solid red;
+    min-width: 950px;
+    background: #4e4b59;
+}
+
+    .footer a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .footer p {
+        margin-bottom: 12px;
+        color: #fff;
+    }

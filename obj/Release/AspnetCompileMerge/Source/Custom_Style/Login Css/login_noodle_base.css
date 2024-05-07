@@ -1,0 +1,1179 @@
+﻿/* common styles */
+body {
+    font: 12px/18px Arial,Verdana,sans-serif;
+    background-image: url('../../Images/all-mots-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.85;
+}
+
+#subsystem {
+    /*background: url($ROOT+"/static/images/bg-subsystem.jpg") repeat-x scroll center top white;*/
+    background-color: #252032;
+    margin: 0;
+}
+
+#container {
+    margin: 0 auto;
+    position: relative;
+    /*width: 780px;
+  height: 100%;*/
+}
+
+#content .panel, #profile_box.panel {
+    padding: 25px;
+    height: auto;
+}
+
+a:link, a:visited {
+    color: #fff;
+}
+
+.popover-content a:link, .popover-content a:visited, #signInForm a.smalltext, .panel a {
+    color: #4196b4;
+}
+
+#error_msg a:link, #error_msg a:visited {
+    color: #be122a !important;
+    text-decoration: underline !important;
+}
+
+a {
+    outline: medium none;
+}
+
+#subsystem h3, #subsystem h3 a, #subsystem h4 {
+    color: #444;
+}
+
+.main {
+    
+    background-size: 100%;
+    min-height: 512px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    min-width: 1000px;
+    overflow-y: auto;
+    min-width: 950px;
+}
+
+.sections {
+    border: 0px solid red;
+    color: #444;
+    display: block;
+    float: left;
+}
+
+.btnShadow {
+    box-shadow: 0px 1px 4px 0px #999;
+}
+
+.leftContent {
+    /*padding: 20px 0px 20px 11.5em;*/
+    width: 46%;
+    text-align: left;
+}
+
+.rightContent {
+    /*padding: 20px 11.5em 20px 0px;*/
+    width: 46%;
+    text-align: left;
+    float: right;
+}
+
+.centerContent {
+    width: 8%;
+}
+
+.nospacebefore {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.dotted_rule {
+    border-bottom: 0px dotted #ccc;
+    margin-bottom: 15px;
+    padding-top: 15px;
+}
+
+h4.black {
+    font-size: 14px !important;
+    font-weight: bold !important;
+    margin-bottom: 4px !important;
+    color: #000 !important;
+}
+
+.big_button_half {
+    background-color: #4196b4;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: Arial,Verdana,sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    width: 45%;
+    height: 34px;
+}
+
+.big_button {
+    background-color: #4196b4;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: Arial,Verdana,sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    height: 34px;
+}
+
+.marginTop10 {
+    margin-top: 10px;
+}
+
+.martop5 {
+    margin-top: 5px;
+}
+
+.marginTop20 {
+    margin-top: 20px;
+}
+
+.marginLeft25 {
+    margin-left: 25%;
+}
+
+.marginLeft15 {
+    margin-left: 15% !important;
+}
+
+.marginLeft5 {
+    margin-left: 5%;
+}
+
+.accountLabels {
+    display: inline-block;
+    width: 15%;
+    color: #7ca653;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+#subsystem .content.border {
+    /*border-left: 1px dotted #ccc;*/
+}
+
+#subsystem .content {
+    /*margin: 0 80px;*/
+}
+
+.content {
+    /*padding: 0 18px;*/
+    position: relative;
+}
+
+.main h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: 15px;
+}
+
+.main h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+
+.inputLabels {
+    display: inline-block;
+    text-align: right;
+    width: 25%;
+}
+
+.passwordLabels {
+    display: inline-block;
+    width: 15% !important;
+}
+
+.marginTop0 {
+    margin-top: 0px !important;
+}
+
+.marginTop-15 {
+    margin-top: -15px;
+}
+
+.marginTop5 {
+    margin-top: 5px;
+}
+
+.marginTop15 {
+    margin-top: 15px;
+}
+
+.marginTop25 {
+    margin-top: 25px;
+}
+
+.marginTop30 {
+    margin-top: 30px;
+}
+
+.marginTop35 {
+    margin-top: 35px;
+}
+
+.marginTop50 {
+    margin-top: 50px;
+}
+
+.marginBottom5 {
+    margin-bottom: 5px;
+}
+
+.marginBottom10 {
+    margin-bottom: 10px;
+}
+
+.marginBottom15 {
+    margin-bottom: 15px;
+}
+
+.marginBottom30 {
+    margin-bottom: 30px;
+}
+
+.registrationLabels {
+    display: inline-block;
+    width: 35% !important;
+    text-align: right;
+}
+
+.marginLeft10 {
+    margin-left: 10%;
+}
+
+.marginLeft35 {
+    margin-left: 35%;
+}
+
+.marginLeft40 {
+    margin-left: 40%;
+}
+
+.displayBlock {
+    display: inline-block !important;
+}
+
+.radioBtn {
+    float: left;
+    width: 4%;
+}
+
+.radioBtnLbl {
+    float: right;
+    width: 95%;
+}
+
+.newUserLabel {
+    display: inline-block;
+    text-align: right;
+    width: 30% !important;
+}
+
+.registerBtn {
+    background-color: #5a6a9a;
+}
+
+.smalltext {
+    font-size: 10px;
+}
+
+#error_msg, #error_msg_2 {
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #be122a;
+    background-color: #f8d8dd;
+    border: 1px #be122a solid;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 3px;
+}
+
+#success_msg, #success_msg_2, .success_msg {
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #53a600;
+    background-color: #f2ffe5;
+    border: 1px #53a600 solid;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.none {
+    display: none;
+}
+
+.capitalInitials {
+    text-transform: uppercase;
+}
+
+.boldFont {
+    font-weight: bold !important;
+}
+
+.font16 {
+    font-size: 16px;
+}
+
+.font14 {
+    font-size: 14px;
+}
+
+.sectionHeading {
+    /*    font-face: roboto, bold !important;*/
+    font-family:Eurostile;   
+    font-size: 22px !important;
+    color: #0069B4;
+    margin: 0px;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+form .inputbox {
+    width: 100%;
+    height: 34px;
+    padding: 2px 11px;
+    border: 0px;
+    border-radius: 2px;
+    color: #000;
+    border: 1px solid #999;
+    background: #fff url(images/username_logo.png) no-repeat right center !important;
+}
+
+form .inputbox_password {
+    width: 100%;
+    height: 34px;
+    padding: 2px 11px;
+    border: 0px;
+    border-radius: 2px;
+    color: #000;
+    border: 1px solid #999;
+    background: #fff url(images/password_logo.png) no-repeat right center !important;
+}
+
+
+
+form .selectbox {
+    width: 100%;
+    height: 34px;
+    color: #000;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #fff;
+}
+
+form .checkbox {
+    width: 100%;
+    height: 18px;
+    margin: 0 !important;
+    float: left !important;
+}
+
+form label {
+    vertical-align: top;
+    margin-left: 10px;
+}
+
+.pagetext {
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+    .pagetext li {
+        margin-bottom: 10px;
+    }
+
+.submenu {
+    margin-right: 41px;
+    padding-top: 7px;
+    text-align: right;
+}
+
+    .submenu a, .submenu a:hover {
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+.hide {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+ul.options li {
+    list-style: none;
+    margin-left: -40px;
+    margin-bottom: 30px;
+}
+
+    ul.options li label {
+        margin-left: 10px;
+        position: absolute;
+        font-weight: normal;
+    }
+
+.optionArrowIcon {
+    width: 1.5em;
+}
+
+.retrievePasswordForms, .newRegistraionForms, .revalidateForms, .accountForms {
+    margin-top: 50px;
+}
+
+.infoicon {
+    vertical-align: middle;
+    width: 15px;
+}
+
+.popover {
+    border: none;
+    opacity: 0.9 !important;
+    font-size: 12px !important;
+    font-weight: normal;
+    width: 280px;
+}
+
+.pt-4 {
+    padding-top: 1.5rem !important;
+}
+
+.pb-4, .py-4 {
+    padding-bottom: 1.5rem !important;
+}
+
+.btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+.pt-3, .py-3 {
+    padding-top: 1rem !important;
+}
+
+.pb-3, .py-3 {
+    padding-bottom: 1rem !important;
+}
+
+.pb-2, .py-2 {
+    padding-bottom: 0.5rem !important;
+}
+
+.pt-4, .py-4 {
+    padding-top: 1.5rem !important;
+}
+
+.popover .popover-content {
+    background-color: #000;
+    margin: -1px;
+    line-height: 1.2em;
+    color: #d8d8d8;
+    border-radius: 4px;
+}
+
+.popover ul li {
+    list-style-type: disc;
+    margin-left: -25px !important;
+    margin-bottom: 6p !important;
+}
+
+.popover ol, .popover ul {
+    margin-top: 6px !important;
+}
+
+    .popover ol li {
+        list-style-type: decimal;
+        margin-left: -25px !important;
+        margin-bottom: 6px !important;
+    }
+
+.popover .popover-title {
+    display: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.popover.left > .arrow:after {
+    border-left-color: #000 !important;
+}
+
+.popover.right > .arrow:after {
+    border-right-color: #000 !important;
+}
+
+.popover.top > .arrow:after {
+    border-top-color: #000 !important;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #000 !important;
+}
+
+.disable {
+    color: #999 !important;
+}
+
+.textalignCenter {
+    text-align: center;
+}
+
+.textalignRight {
+    text-align: right;
+}
+
+.passwordHint {
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+    text-align: center;
+}
+
+    .passwordHint li {
+        display: inline;
+        list-style: none;
+        margin-left: 15px;
+    }
+
+.outsidebuttonwrapper {
+    clear: both;
+}
+
+.width56per {
+    width: 56%;
+}
+
+.width46per {
+    width: 46%;
+}
+
+.valignSub {
+    vertical-align: sub;
+}
+
+.width48per {
+    width: 48% !important;
+}
+
+.width42per {
+    width: 42% !important;
+}
+
+.selectlabel {
+    display: inline-block;
+    height: 32px;
+    padding: 7px 0;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/* styles for inactive page and spinning circle */
+#inactivePageOverlay {
+    background: white;
+    display: none;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 37px;
+    position: fixed;
+    z-index: 998;
+    opacity: 0;
+}
+
+#loadingImage {
+    display: none;
+    position: fixed;
+    width: 32px;
+    height: 40px;
+    top: 45%;
+    left: 47%;
+    z-index: 2000;
+}
+
+#circularG {
+    position: relative;
+    width: 128px;
+    height: 128px;
+}
+
+.circularG {
+    position: absolute;
+    background-color: #428bca;
+    width: 29px;
+    height: 29px;
+    -moz-border-radius: 19px;
+    -moz-animation-name: bounce_circularG;
+    -moz-animation-duration: 1.04s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: linear;
+    -webkit-border-radius: 19px;
+    -webkit-animation-name: bounce_circularG;
+    -webkit-animation-duration: 1.04s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: linear;
+    -ms-border-radius: 19px;
+    -ms-animation-name: bounce_circularG;
+    -ms-animation-duration: 1.04s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-direction: linear;
+    -o-border-radius: 19px;
+    -o-animation-name: bounce_circularG;
+    -o-animation-duration: 1.04s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction: linear;
+    border-radius: 19px;
+    animation-name: bounce_circularG;
+    animation-duration: 1.04s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+}
+
+#circularG_1 {
+    left: 0;
+    top: 50px;
+    -moz-animation-delay: 0.39s;
+    -webkit-animation-delay: 0.39s;
+    -ms-animation-delay: 0.39s;
+    -o-animation-delay: 0.39s;
+    animation-delay: 0.39s;
+}
+
+#circularG_2 {
+    left: 14px;
+    top: 14px;
+    -moz-animation-delay: 0.52s;
+    -webkit-animation-delay: 0.52s;
+    -ms-animation-delay: 0.52s;
+    -o-animation-delay: 0.52s;
+    animation-delay: 0.52s;
+}
+
+#circularG_3 {
+    top: 0;
+    left: 50px;
+    -moz-animation-delay: 0.65s;
+    -webkit-animation-delay: 0.65s;
+    -ms-animation-delay: 0.65s;
+    -o-animation-delay: 0.65s;
+    animation-delay: 0.65s;
+}
+
+#circularG_4 {
+    right: 14px;
+    top: 14px;
+    -moz-animation-delay: 0.78s;
+    -webkit-animation-delay: 0.78s;
+    -ms-animation-delay: 0.78s;
+    -o-animation-delay: 0.78s;
+    animation-delay: 0.78s;
+}
+
+#circularG_5 {
+    right: 0;
+    top: 50px;
+    -moz-animation-delay: 0.91s;
+    -webkit-animation-delay: 0.91s;
+    -ms-animation-delay: 0.91s;
+    -o-animation-delay: 0.91s;
+    animation-delay: 0.91s;
+}
+
+#circularG_6 {
+    right: 14px;
+    bottom: 14px;
+    -moz-animation-delay: 1.04s;
+    -webkit-animation-delay: 1.04s;
+    -ms-animation-delay: 1.04s;
+    -o-animation-delay: 1.04s;
+    animation-delay: 1.04s;
+}
+
+#circularG_7 {
+    left: 50px;
+    bottom: 0;
+    -moz-animation-delay: 1.17s;
+    -webkit-animation-delay: 1.17s;
+    -ms-animation-delay: 1.17s;
+    -o-animation-delay: 1.17s;
+    animation-delay: 1.17s;
+}
+
+#circularG_8 {
+    left: 14px;
+    bottom: 14px;
+    -moz-animation-delay: 1.3s;
+    -webkit-animation-delay: 1.3s;
+    -ms-animation-delay: 1.3s;
+    -o-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+}
+
+@-moz-keyframes bounce_circularG {
+    0% {
+        -moz-transform: scale(1);
+    }
+
+    100% {
+        -moz-transform: scale(0.3);
+    }
+}
+
+@-webkit-keyframes bounce_circularG {
+    0% {
+        -webkit-transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(0.3);
+    }
+}
+
+@-ms-keyframes bounce_circularG {
+    0% {
+        -ms-transform: scale(1);
+    }
+
+    100% {
+        -ms-transform: scale(0.3);
+    }
+}
+
+@-o-keyframes bounce_circularG {
+    0% {
+        -o-transform: scale(1);
+    }
+
+    100% {
+        -o-transform: scale(0.3);
+    }
+}
+
+@keyframes bounce_circularG {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.3);
+    }
+}
+/* School code registration process styles*/
+#myModal {
+    font-size: 1.4rem;
+}
+
+.bg-blue {
+    background-color: #3093b5;
+}
+
+.modal-header {
+    border-bottom: 1px solid #78b9cf;
+    position: relative;
+}
+
+.btn-blue {
+    background-color: #3093b5;
+    color: #ffffff;
+}
+
+.bg-step1_bg_blue {
+    width: 117px;
+    height: 37px;
+    background: url("../images/css_sprites.png") -10px -10px;
+}
+
+.bg-step1_bg_white {
+    width: 117px;
+    height: 37px;
+    background: url("../images/css_sprites.png") -10px -67px;
+}
+
+.bg-step2_bg_blue {
+    width: 117px;
+    height: 37px;
+    background: url("../images/css_sprites.png") -147px -10px;
+}
+
+.bg-step2_bg_white {
+    width: 117px;
+    height: 37px;
+    background: url("../images/css_sprites.png") -147px -67px;
+}
+
+.steps {
+    float: left;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.modal-title {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+}
+
+.modal-content {
+    border: none;
+}
+
+.color-blue {
+    color: #3093b5;
+}
+
+.steps-wrap {
+    display: inline-flex;
+}
+
+.step1 label, .step2 label {
+    margin-bottom: 0px;
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+    line-height: 37px;
+}
+
+.clearboth {
+    clear: both;
+}
+
+.modal-footer {
+    justify-content: center;
+    border-top: 0px;
+}
+
+.close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover {
+    color: #ffffff;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.fontbold {
+    font-weight: 600;
+}
+
+.btn.focus, .btn:focus {
+    box-shadow: none;
+}
+
+#myModal label {
+    color: #616161;
+    margin-left: 0px;
+}
+
+/* The container */
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 250px;
+    text-align: left;
+}
+
+    /* Hide the browser's default radio button */
+    .checkbox-container input {
+        position: absolute;
+        display: none;
+        cursor: pointer;
+    }
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #404040;
+}
+
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+/* Show the indicator (dot/circle) when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkbox-container .checkmark:after {
+    top: 2px;
+    left: 2px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #3093b5;
+}
+
+.acc-btn {
+    background: transparent;
+    color: #3093b5;
+    width: 100%;
+    border: 1px solid #3093b5 !important;
+}
+
+.select-acc-btn {
+    background: #cbe4ec;
+}
+
+.w-49 {
+    width: 49%;
+}
+
+#myModal .modal-body {
+    padding: 0px !important;
+}
+
+#myModal .form-control {
+    height: 34px !important;
+    font-size: 1.4rem;
+}
+
+#myModal p {
+    color: #616161;
+}
+
+/*.btn.focus, .btn:focus, .btn:hover {
+    color: #50b4d6;
+}*/
+.btn-pos-btm {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+#myModal h3 {
+    margin-top: 0px;
+}
+
+#process1, #process2 {
+    height: 390px;
+}
+
+.setHeight {
+    height: calc(100% - 57px) !important;
+}
+
+#form_logon_option {
+    margin-top: 1rem;
+}
+
+.forgot-password-link {
+    color: #3093b5 !important;
+    font-size: 14px;
+    float: right;
+    margin-top: 5px;
+}
+
+#actionNewButton, #actionExistingButton {
+    font-size: 14px;
+}
+
+#actionExisting, #actionNew {
+    position: absolute;
+    top: 29px;
+    display: none;
+}
+
+.acc-btn.btn:focus {
+    box-shadow: none !important;
+}
+
+#myModal .modal-dialog {
+    top: 15%;
+}
+
+.acc-btn:hover {
+    color: #3093b5;
+}
+
+.btn-blue:hover, .btn-blue:focus {
+    color: #ffffff;
+}
+
+#myModal .form-control:focus {
+    box-shadow: none;
+}
+
+#myModal .close-btn, #myModal .modal-title {
+    font-size: 20px;
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+.error-border {
+    border: 1px solid red !important;
+}
+
+.custom-error-msg.errorMsg {
+    background: #f14f4f;
+    color: white;
+}
+
+.custom-error-msg {
+    background: none repeat scroll 0 0 #e24343;
+    border-radius: 2px;
+    color: white;
+    padding: 5px 10px;
+    top: 42px;
+    z-index: 1600;
+    text-align: center;
+    word-wrap: break-word;
+    min-width: 79%;
+    max-width: 80%;
+    box-shadow: 2px 2px 10px #c15152;
+    position: fixed;
+}
+
+.closeToastMsg {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    float: right;
+    line-height: 20px;
+    width: 4%;
+    cursor: pointer;
+}
+
+.errorText {
+    width: 96%;
+}
+
+.font12 {
+    font-size: 12px;
+}
+
+.outsidebuttonwrapper .editProfile {
+    width: 50%;
+    margin-top: 20px;
+}
+
+.width100per {
+    width: 100% !important;
+}
+
+.mr-1, .mx-1 {
+    margin-right: 0.25rem !important;
+}
+
+.ml-1, .mx-1 {
+    margin-left: 0.25rem !important;
+}
+
+.float-left {
+    float: left !important;
+}
+
+.mb-0 {
+    margin-bottom: 0px;
+}
+
+.btn {
+    font-weight: 400 !important;
+}
+
+.modal-header {
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 1250px) and (min-width: 1100px) {
+    .big_button .signInGoogleBtn, .big_button .signInOfficeBtn {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 1099px) {
+    .big_button .signInGoogleBtn, .big_button .signInOfficeBtn {
+        font-size: 12px;
+    }
+
+    #myModal p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 500px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 800px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .width-50per {
+        width: 30% !important;
+    }
+
+    .mar-left25per {
+        margin-left: 35% !important;
+    }
+
+    .mar-top10per {
+        margin-top: 5% !important;
+    }
+}
+
+@media (max-width: 1279px) {
+    .width-66per {
+        width: 66.66666667% !important;
+    }
+
+    .mar-left16per {
+        margin-left: 16.66666667% !important;
+    }
+    .mar-top10per {
+        margin-top: 15.66666667% !important;
+    }
+}

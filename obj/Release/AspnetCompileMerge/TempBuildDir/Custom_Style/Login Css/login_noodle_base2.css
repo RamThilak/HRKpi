@@ -1,0 +1,146 @@
+﻿/* styles for sign in page */
+.signInLabels {
+    display: inline-block;
+    width: 25%;
+    min-width: 100px;
+    color: #7ca653;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.signInLabelsGapps {
+    display: inline-block;
+    width: 25%;
+    min-width: 100px;
+    color: #000;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-left: 10%;
+}
+
+.NTLogoSignin {
+    float: left;
+    margin-right: 5px;
+    margin-top: 20px;
+    width: 150px;
+    height: 100px;
+    background: url(/logon/static/images/logo_icytePopup.png) no-repeat;
+}
+
+.loginSeperator {
+    border-left: 1px dotted #999;
+    width: 1px;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+#googleEduHeading {
+    display: inline-flex;
+    display: -ms-flexbox;
+    display: -webkit-inline-flex;
+}
+
+.googleEducationIcon {
+    width: 204px;
+}
+
+#googleAppIcons {
+    width: 0px;
+    bottom: 10px;
+    right: 147px;
+    position: absolute;
+}
+
+.googleAppIcon {
+    width: 110px;
+}
+
+.circle {
+    vertical-align: top;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    color: #333;
+    border: 1px solid #999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    .circle div {
+        margin-top: 6px;
+    }
+
+.freeAppLink {
+    color: #7ca653;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.marginLeftLogin {
+    margin-left: 26%;
+}
+
+.rememberCheckbox {
+    margin: 0 !important;
+    float: left !important;
+}
+
+.rememberLabel {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.iPhoneImage {
+    width: 90px;
+    height: 30px;
+}
+
+.androidImage {
+    width: 90px;
+    height: 30px;
+}
+
+.geCont {
+    margin-left: -30px;
+    margin-top: -4px;
+}
+
+.integrationLogo {
+    height: 22px;
+    margin-top: 6px;
+}
+
+.signInGoogleBtn, .signInOfficeBtn, .signInCleverBtn {
+    text-transform: uppercase !important;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+
+#googleEduHeading h1 {
+    margin-bottom: 15px;
+}
+
+.marginTop20 {
+    margin-top: 20px;
+}
+
+.marginLeft10 {
+    margin-left: 10px;
+}
+
+.signinIcons {
+    background-color: #fff;
+    width: 40px;
+    height: 34px;
+    position: absolute;
+}

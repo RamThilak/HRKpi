@@ -1,0 +1,274 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
+using System.IO;
+using System.Text.RegularExpressions;
+using System.Configuration;
+
+namespace HRKpi
+{
+    public partial class Objective_final_view : System.Web.UI.Page
+    {
+        protected private static Label MyLabel;
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            MyLabel = lblerr;
+
+            if (!IsPostBack)
+            {
+                MyLabel = lblerr;
+                lblerr.Text = "";
+                cbocompany.Items.Clear();
+                cbocompany.Items.Add(new ListItem("-- Select Company --", "0"));
+
+                DataTable dt = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter();
+
+                string constr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+                using (SqlConnection con = new SqlConnection(constr))
+                {
+                    using (SqlCommand cmd1 = new SqlCommand("GetEmpCompanyList"))
+                    {
+                        cmd1.CommandType = CommandType.StoredProcedure;
+                        cmd1.Parameters.AddWithValue("@uid", Convert.ToInt32(Session["UserID"]));
+                        cmd1.Parameters.AddWithValue("@comp", Convert.ToInt32(Session["LoginUserCompanyId"]));
+                        cmd1.Connection = con;
+                        con.Open();
+                        adapter = new SqlDataAdapter(cmd1);
+                        adapter.Fill(dt);
+                        cbocompany.DataTextField = "company_name";
+                        cbocompany.DataValueField = "company_id";
+                        cbocompany.DataSource = dt;
+                        cbocompany.DataBind();
+                        dt.Dispose();
+                    }
+                }
+
+               // ClearControls();
+                cbocompany.Focus();
+
+
+            }
+        }
+
+        protected void ClearControls()
+        {
+            cbocompany.SelectedValue = "0";
+            cboemp.SelectedValue = "0";
+            lblcode.Text = "";
+            lblapprover.Text = "";
+            lblreviewer.Text = "";
+        }
+        protected void cboapprover_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void button_getdetail_Click(object sender, EventArgs e)
+        {
+            if (cboyr.SelectedValue == "0")
+            {
+                MyLabel.Text = "Select Year !";
+                return;
+            }
+
+            if (cbocompany.SelectedValue == "0")
+            {
+                MyLabel.Text = "Select Company !";
+                return;
+            }
+
+            
+
+            int finyr = Convert.ToInt32(lblyr.Text);
+            int comp = Convert.ToInt32(lblcomp.Text);
+
+
+            if (cboemp.SelectedValue == "0")
+            {
+                MyLabel.Text = "Select Employee !";
+                return;
+            }
+
+            string ecode = lblempcode.Text;
+
+            //int finyr = 2021;
+            //int comp = 12;
+            string empcode = "";
+
+            if (comp==12)
+            {
+                empcode = GetPEILEcode(ecode);               
+            }
+            else
+            {
+                empcode = ecode;
+            }
+
+          
+
+            Session["Fin_year"] = finyr;
+            Session["cid"] = comp;
+            Session["eid"] = ecode;
+            Session["emp_code"] = empcode;
+
+            Response.Redirect("PMS_approve.aspx");
+
+        }
+
+        protected void cbocompany_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (cboyr.SelectedValue == "0")
+            {
+                MyLabel.Text = "Select Year !";
+                return;
+            }
+
+            if (cbocompany.SelectedValue == "0")
+            {
+                MyLabel.Text = "Select Company !";
+                return;
+            }
+
+            int finyr = Convert.ToInt32(cboyr.SelectedValue);
+            int comp = Convert.ToInt32(cbocompany.SelectedValue);
+
+            DataTable dtemp = new DataTable();
+            dtemp = GetEmpDetail(comp, finyr);
+            cboemp.DataTextField = "emp_name";
+            cboemp.DataValueField = "emp_code";
+            cboemp.DataSource = dtemp;
+            cboemp.DataBind();
+
+            lblcomp.Text = cbocompany.SelectedValue;
+        }
+
+
+        protected DataTable GetEmpDetail(int compid, int yr)
+        {
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString.ToString());
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable dtuser = new DataTable();
+            SqlCommand cmd = new SqlCommand("FIllCompanyEmpObjectiveList", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@compid", compid);
+            cmd.Parameters.AddWithValue("@yr", yr);
+            cmd.Connection = conn;
+            conn.Open();
+            adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dtuser);
+            cmd.Dispose();
+            conn.Close();
+            conn.Dispose();
+            return dtuser;
+
+        }
+
+        protected void cboemp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboemp.SelectedValue == "0")
+            {
+                MyLabel.Text = "Select Employee !";
+                return;
+            }
+            
+            string ecode = cboemp.SelectedValue;
+            lblcode.Text = cboemp.SelectedValue;
+            lblreviewer.Text = GetReviewer(Convert.ToInt32(cbocompany.SelectedValue) ,ecode);
+            lblapprover.Text = GetApprover(Convert.ToInt32(cbocompany.SelectedValue), ecode);
+
+            lblempcode.Text = cboemp.SelectedValue;
+        }
+
+
+        protected string GetReviewer(int compid, string empcode)
+        {
+            string nm = "";
+
+            string constrnew = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+            using (SqlConnection concomp = new SqlConnection(constrnew))
+            {
+                using (SqlCommand cmdnew = new SqlCommand("GetKPIApprover1_view"))
+                {
+                    cmdnew.CommandType = CommandType.StoredProcedure;
+
+                    cmdnew.Parameters.AddWithValue("@compid", compid);
+                    cmdnew.Parameters.AddWithValue("@empcode", empcode);
+                    cmdnew.Connection = concomp;
+                    concomp.Open();
+                    nm = Convert.ToString(cmdnew.ExecuteScalar());
+                    // concomp.Close();
+                    return nm;
+                }
+            }       
+
+        }
+
+        protected string GetPEILEcode(string empcode)
+        {
+            string nm = "";
+
+            string constrnew = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+            using (SqlConnection concomp = new SqlConnection(constrnew))
+            {
+                using (SqlCommand cmdnew = new SqlCommand("GetPEILIntCode"))
+                {
+                    cmdnew.CommandType = CommandType.StoredProcedure;
+
+                     cmdnew.Parameters.AddWithValue("@empcode", empcode);
+                    cmdnew.Connection = concomp;
+                    concomp.Open();
+                    nm = Convert.ToString(cmdnew.ExecuteScalar());
+                    // concomp.Close();
+                    return nm;
+                }
+            }
+
+        }
+
+        protected string GetApprover(int compid, string empcode)
+        {
+            string nm = "";
+
+            string constrnew = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+            using (SqlConnection concomp = new SqlConnection(constrnew))
+            {
+                using (SqlCommand cmdnew = new SqlCommand("GetKPIApprover2_view"))
+                {
+                    cmdnew.CommandType = CommandType.StoredProcedure;
+
+                    cmdnew.Parameters.AddWithValue("@compid", compid);
+                    cmdnew.Parameters.AddWithValue("@empcode", empcode);
+                    cmdnew.Connection = concomp;
+                    concomp.Open();
+                    nm = Convert.ToString(cmdnew.ExecuteScalar());
+                    // concomp.Close();
+                    return nm;
+                }
+            }
+
+        }
+
+        protected void cboyr_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblapprover.Text = "";
+            lblcode.Text = "";
+            lblreviewer.Text = "";
+            cbocompany.SelectedValue = "0";
+            cboemp.SelectedValue = "0";
+
+            lblyr.Text = cboyr.SelectedValue;
+
+        }
+    }
+}

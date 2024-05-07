@@ -1,0 +1,158 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PMS_Approve_Mst.master.cs" Inherits="HRKpi.PMS_Approve_Mst" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="icon" type="image/png" href="images/Pricol_Title_Icon.png" />
+    <title>Performance Management System </title>
+
+    <link href="Approval.css" rel="stylesheet" />
+     
+    <style type="text/css">
+        .style_left_panel
+        {
+            width: 15%;
+            background: #0052D4;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #6FB1FC, #4364F7, #0052D4);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #6FB1FC, #4364F7, #0052D4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */           
+            /*color: black;*/
+            
+            color: black;
+        }
+         .style10
+        {
+            margin: 0px;		
+            width: 100%;
+	        height: 100%;
+            background: url(Images/B2.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+
+         .style_header1
+        {
+              padding-top: 10px;
+              padding-right: 0px;
+              padding-bottom: 10px;
+              padding-left: 0px;
+        }
+
+        .style_left_menu{
+            width:100px;
+            background: rgb(208,228,247); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(208,228,247,1) 0%, rgba(115,177,231,1) 24%, rgba(10,119,213,1) 50%, rgba(83,159,225,1) 79%, rgba(135,188,234,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(208,228,247,1) 0%,rgba(115,177,231,1) 24%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 79%,rgba(135,188,234,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(208,228,247,1) 0%,rgba(115,177,231,1) 24%,rgba(10,119,213,1) 50%,rgba(83,159,225,1) 79%,rgba(135,188,234,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', endColorstr='#87bcea',GradientType=0 ); 
+        }
+
+        .cell
+        {
+        text-align:left;
+        font-size:medium;
+        }
+
+        .righttextbox
+        {
+        float:right;
+         font-size:medium;
+        }
+
+         
+
+    </style>
+       
+    
+    <meta http-equiv="Page-Enter" content="Alpha(opacity=100)"/>
+    <meta http-equiv="Page-Exit" content="Alpha(opacity=100)"/>
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0)"/>
+    <meta http-equiv="Page-Exit" content="blendTrans(Duration=0)"/>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div id="templatemo_container">
+  
+            <div id="templatemo_header">
+                <%--<div id="logosection">            
+	                <div class="sitelogo">
+                       <asp:Image ID="Image1" runat="server"  Height="130px" ImageUrl="~/Images/logo1.png" Width="100%" />
+                    </div>
+        	
+              </div>--%>
+                <div id="header">
+        	        <div class="title">
+                         <%--<br />
+	        	         <span class="bigtext">Pricol Employee Portal</span><br />--%>
+    	    	         </div>
+
+                </div>
+	        </div>
+
+            <div class="title">
+             
+
+            </div>
+
+             
+            <div id ="template_login_details">
+                <asp:Panel ID="Panel1" runat="server">
+                     <table border="0" style= " border-collapse:collapse; margin:0px; width:100%">
+                         <tr bgcolor="#0069B4" style="display:none;">                           
+                             <td colspan="2" style="font-size:medium; font-weight: bold; color:white; text-align:center;">
+                                 <asp:Label ID="lbl_company" runat="server"></asp:Label>
+                                 &nbsp; KPI for FY 2021-22</td>
+                         </tr>
+                        <tr bgcolor="#0069B4" style="text-align: left">
+                            <td style="width: 100%; font-size: medium; color: white;">
+                                <div style="float: left;">
+                                    Welcome,
+                                   <asp:Label ID="lblUser" runat="server" Visible="True"></asp:Label>
+                                </div>
+                                <div style="float: right;">
+                                    <a href="change_password.aspx" style="color: white;">Change Password</a>
+                                    &nbsp;&nbsp;
+                                   <asp:ImageButton ID="ibtn_logout" runat="server" OnClick="lbLogout_Click" Height="16px" ImageUrl="~/Images/logout.png" Width="16px" />
+                                    <asp:LinkButton ID="lbLogout" runat="server" OnClick="lbLogout_Click" Style="color: white;"
+                                        CausesValidation="False">Home</asp:LinkButton>
+                                </div>
+                            </td>
+                        </tr>
+                         
+                      </table>                
+                </asp:Panel>
+            </div>
+
+            
+    
+            <table width="100%" height="400px">
+                <tr>
+
+                    <td valign="top" style="background-color: white;">
+                        <%--OnClientClick="JavaScript:window.history.back(1); return false;"--%>
+                        
+                    </td>
+                </tr>
+                <tr>
+
+                    <td valign="top" style="background-color: white;">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        
+        </div>
+    <asp:Panel ID="Panel2" runat="server" Width="100%" Visible="False">
+                <asp:LinkButton ID="lnk_kpi" runat="server" PostBackUrl="~/KPI.aspx" CausesValidation="False">KPI</asp:LinkButton>
+                <br />
+                <asp:LinkButton ID="lnk_self_rating" runat="server" PostBackUrl="~/Kpi_Self_Evaluation.aspx" CausesValidation="false">KPI Self Rating</asp:LinkButton>
+                <br />
+                <asp:LinkButton ID="lnk_rating" runat="server" PostBackUrl="~/KPI_Review.aspx" CausesValidation="False">KPI-Rating</asp:LinkButton>
+            </asp:Panel>
+    </form>
+</body>
+</html>
+
